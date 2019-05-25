@@ -24,13 +24,20 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 */
 
+function itemInfo(arr, callback) {
+  console.log(callback(arr));
+}
 
-function getLength(arr, cb) {
+
+function getLength(arr) {
   // getLength passes the length of the array into the callback.
+  return arr.length;
 }
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  const last = arr[arr.length - 1];
+  return last;
 }
 
 function sumNums(x, y, cb) {
@@ -53,3 +60,6 @@ function removeDuplicates(array, cb) {
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 }
+
+itemInfo(items, getLength)
+itemInfo(items, last)
