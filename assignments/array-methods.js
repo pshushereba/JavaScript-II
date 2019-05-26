@@ -98,6 +98,34 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 
+let company = [];
+
+runners.forEach(function (runner) {
+    company.push(runner.company_name);
+});
+
+console.log(company);
+
 // Problem 2
 
+let bigDonors = [];
+
+runners.filter((runner) => {
+    if (runner.donation >= 200) {
+        bigDonors.push(runner);
+    }
+});
+
+console.log(bigDonors);
+
 // Problem 3
+
+let someEmails = [];
+
+runners.filter((runner) => {
+    if(runner.email.startsWith("m")) {
+        someEmails.push(runner.email);
+    }
+});
+
+console.log(someEmails);
